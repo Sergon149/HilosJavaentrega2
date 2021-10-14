@@ -1,16 +1,31 @@
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hola");
+        System.out.println("Comenzamos a las " + System.currentTimeMillis());
+
+        Hilo h1 = new Hilo("Hilo 1");
+        Hilo h2 = new Hilo("Hilo 2");
+
 
         try {
-            Thread.sleep(5000);
+            h1.start();
+            h1.join();
+            h2.start();
+            h2.join();
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Adios");
+
+        System.out.println("Terminamos a las " + System.currentTimeMillis());
 
 
+    }
 
+    public static Integer getRandomTimeInMills() {
+        Random r = new Random();
+        return r.nextInt(5) * 1000;
     }
 }
