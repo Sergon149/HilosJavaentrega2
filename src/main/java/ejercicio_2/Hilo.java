@@ -16,7 +16,6 @@ public class Hilo extends Thread {
         aux=System.currentTimeMillis();
         Random r = new Random();
 
-
         try {
             Thread.sleep(1000);
             vecesrep=1;
