@@ -6,6 +6,7 @@ public class Cajero2 {
         int aux=0;
         for (int i =0; i<cliente.itemsCarrito.size();i++)
         aux+=cliente.itemsCarrito.get(i).precio;
+        System.out.println(aux);
     return aux;
     }
 

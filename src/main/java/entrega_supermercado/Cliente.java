@@ -23,7 +23,7 @@ public class Cliente extends Thread{
         numero = (int)(Math.random()*max+1);
         Thread.sleep(1000);
         max-=1;
-        itemsCarrito.add(new Items("Item"+Math.random(),(Math.random()+1)*100));
+        itemsCarrito.add(new Items("Item"+Math.random(),(Math.random()*100)+1));
     }while(numero!=1);
 
     }
