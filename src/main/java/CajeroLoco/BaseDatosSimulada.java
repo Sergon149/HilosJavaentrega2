@@ -16,7 +16,7 @@ public class BaseDatosSimulada {
         BaseDatosSimulada.saldo=saldo;
     }
 
-    public static int sacarDinero(int cantidad) throws InterruptedException {
+    public synchronized static int sacarDinero(int cantidad) throws InterruptedException {
         int saldo = obtenerSaldo();
         if(saldo - cantidad>=0){
             actualizarSaldo(saldo-cantidad);
