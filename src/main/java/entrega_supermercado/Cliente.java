@@ -3,7 +3,7 @@ package entrega_supermercado;
 import java.util.ArrayList;
 
 public class Cliente extends Thread{
-    ArrayList<Items> itemsCarrito = new ArrayList<>();
+     ArrayList<Items> itemsCarrito = new ArrayList<>();
     int max=10;
     int numero = (int)(Math.random()*max+1);
 
